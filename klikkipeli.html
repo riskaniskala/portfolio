@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<meta charset="ISO-8859-1">
+<html>
+    <head>
+        <title> Klikkaa kunnes kaikki kuvat ovat samoja!
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script>
+            var count_clicks = 0;
+            var image = "";
+            $(document).ready(function(){
+                $("img").on({
+                    click: function(){
+                        switch( Math.floor(Math.random()*4)){
+                            case 0: image = "syksy.jpg";
+                            break;
+                            case 1: image = "kesa.jpg";
+                            break;
+                            case 2: image = "kevat.jpg";
+                            break;
+                            case 3: image = "talvi.jpg";
+                        }
+                        $(this).attr("src", image );
+                
+                        count_clicks += 1;
+                        document.getElementById("clicks").innerHTML = "Klikkauksia " + count_clicks;
+ 
+                    }
+                });
+
+            });
+ 
+        </script>
+        <style>
+            img{width:300px;}
+        </style>
+    </head>
+    <body>
+  
+        <table>
+            <tr><td><img src="kevat.jpg"/></td><td><img src="kevat.jpg"  /></td><td><img src="kevat.jpg" /></td></tr>
+            <tr><td><img src="kesa.jpg"/></td><td><img src="kesa.jpg"  /></td><td><img src="kesa.jpg" /></td></tr>
+            <tr><td><img src="syksy.jpg"/></td><td><img src="syksy.jpg"  /></td><td><img src="syksy.jpg" /></td></tr>
+
+        </table>
+              <p id="clicks"></p>
+<footer>
+    <hr/>
+    <h3>Kuvat</h3>
+<p>    
+<a href="http://7-themes.com/6970376-free-fall-images.html" target="_blank"> http://7-themes.com/6970376-free-fall-images.html</a><br/>
+<a href="https://www.designdune.com/freebies/free-spring-wallpapers-for-desktop/" target="_blank">https://www.designdune.com/freebies/free-spring-wallpapers-for-desktop/ </a><br/>
+<a href="http://www.publicdomainpictures.net/view-image.php?image=28545&picture=this-winter" target="_blank"> http://www.publicdomainpictures.net/view-image.php?image=28545&picture=this-winter </a><br/>
+<a href="https://www.pexels.com/search/indian%20summer/" target="_blank"> https://www.pexels.com/search/indian%20summer/</a>
+</p>
+
+</footer>
+    </body>
+
+</html>
